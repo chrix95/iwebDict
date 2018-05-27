@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2017 at 09:57 PM
+-- Generation Time: May 27, 2018 at 02:01 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `webdict`
+-- Database: `iwebdict`
 --
 
 -- --------------------------------------------------------
@@ -31,20 +31,28 @@ CREATE TABLE IF NOT EXISTS `contents` (
   `word` varchar(255) NOT NULL,
   `english` varchar(255) NOT NULL,
   `meaning` text NOT NULL,
-  `sound` varchar(255) NOT NULL,
   `domain` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `contents`
 --
 
-INSERT INTO `contents` (`ID`, `word`, `english`, `meaning`, `sound`, `domain`) VALUES
-(1, 'abasi', 'God', 'The name of the Christian God.', 'sound/test.mp3', 'Religion'),
-(2, 'ekom', 'Praise', 'Praise to the Almighty God', 'sound/test.mp3', 'Religion'),
-(3, 'akam', 'Prayer', 'prayer offered to God', 'sound/test1.mp3', 'Religion'),
-(4, 'unam', 'Meat', 'the flesh of an animal', 'sound/test4.mp3', 'Market');
+INSERT INTO `contents` (`ID`, `word`, `english`, `meaning`, `domain`) VALUES
+(1, 'abasi', 'God', 'The name of the Christian God.', 'Religion'),
+(2, 'ekom', 'Praise', 'Praise to the Almighty God', 'Religion'),
+(3, 'akam', 'Prayer', 'Prayer offered to God', 'Religion'),
+(4, 'unam', 'Meat', 'The flesh of an animal', 'Market'),
+(5, 'adiaha', 'Daughter', 'The most senior female in the family.', 'Family'),
+(6, 'Akpan', 'Son', 'The most senior female in the family.', 'Family'),
+(7, 'ebut', 'Goat', 'An animal with with horns and compact stomach', 'Animal'),
+(8, 'ekpang', 'Spoon', 'A kitchen utensil for eating', 'Kitchen'),
+(9, 'esio', 'Pot', 'A kitchen utensil used for cooking dishes', 'Kitchen'),
+(10, 'ima', 'Love', 'Having an affection for someone specially.', 'Relationship'),
+(11, 'ndito', 'Children', 'Group of siblings living under the the protectiion of parents', 'Family'),
+(12, 'nkong', 'Vegetable', 'Pumpkin leave used for cooking dishes', 'Market'),
+(13, 'urua', 'Market', 'A place where buying and selling takes place.', 'Market');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
