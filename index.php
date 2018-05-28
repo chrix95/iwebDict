@@ -25,6 +25,7 @@
         </div>
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="nav navbar-nav">
+            <li><a href="options.php">OPTIONS</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACT</a></li>
           </ul>
