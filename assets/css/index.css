@@ -88,10 +88,22 @@ button.btn.findOut:hover {
   background-color: blue;
   color: #fff;
 }
-#category {
+#selection {
   margin-top: 5%;
   padding: 25px 0px 8px;
   box-shadow: 0px 0px 27px -4px rgba(255, 73, 33, 0.61);
+}
+#category, #sentences, #tongueTwisters, #contribute {
+  margin: 0% 5%;
+  padding: 25px 0px;
+  box-shadow: 0px 0px 27px -4px rgba(255, 73, 33, 0.61);
+}
+/*********** Category Area **********/
+.sub-category {
+  margin-left: 4%;
+}
+.sub-category strong {
+  color: blue;
 }
 /*********** Media Query **********/
 

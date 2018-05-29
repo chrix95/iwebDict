@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Local WebDictionary</title>
@@ -34,13 +34,13 @@
     </nav>
   </section>
 
-  <section>
+  <section id="group" ng-hide="tab==1 || tab==2 || tab==3 || tab==4" ng-init="tab=0">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2" id="category">
+        <div class="col-md-8 col-md-offset-2" id="selection">
           <div class="row">
             <div class="col-xs-6 col-md-6 text-center">
-              <button type="button" name="button" id="login" class="btn btn-primary findOut">
+              <button type="button" name="category" class="btn btn-primary findOut" ng-click="tab=1">
                 <img src="assets/img/1025.png" alt="" class="img img-responsive center-block" width="35%"/>
                 <h3>
                   Category
@@ -48,7 +48,7 @@
               </button>
             </div>
             <div class="col-xs-6 col-md-6 text-center">
-              <button type="button" name="button" id="login" class="btn btn-primary findOut">
+              <button type="button" name="contribute" class="btn btn-primary findOut" ng-click="tab=2">
                 <img src="assets/img/90.png" alt="" class="img img-responsive center-block" width="35%"/>
                 <h3>
                   Contribute
@@ -56,7 +56,7 @@
               </button>
             </div>
             <div class="col-xs-6 col-md-6 text-center">
-              <button type="button" name="button" id="login" class="btn btn-primary findOut">
+              <button type="button" name="tongueTwisters" class="btn btn-primary findOut" ng-click="tab=3">
                 <img src="assets/img/style.png" alt="" class="img img-responsive center-block" width="35%"/>
                 <h3>
                   Tongue Twisters
@@ -64,7 +64,7 @@
               </button>
             </div>
             <div class="col-xs-6 col-md-6 text-center">
-              <button type="button" name="button" id="login" class="btn btn-primary findOut">
+              <button type="button" name="sentences" class="btn btn-primary findOut" ng-click="tab=4">
                 <img src="assets/img/77.png" alt="" class="img img-responsive center-block" width="35%"/>
                 <h3>
                   Sentence
@@ -77,9 +77,58 @@
     </div>
   </section>
 
+  <section id="category" ng-show="tab===1">
+    <div class="container-fluid">
+      <h1>
+        Select Category
+        <button type="button" name="catBack" class="btn btn-primary back findOut pull-right" ng-click="tab=0">
+          <strong>&lt;&lt; Back</strong>
+        </button>
+      </h1>
+      <div ng-include="'resources/category.php'">
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contribute" ng-show="tab==2">
+    <div class="container-fluid">
+      <h1>
+        Contribute
+        <button type="button" name="catBack" class="btn btn-primary back findOut pull-right" ng-click="tab=0">
+          <strong>&lt;&lt; Back</strong>
+        </button>
+      </h1>
+    </div>
+  </section>
+
+  <section id="tongueTwisters" ng-show="tab==3">
+    <div class="container-fluid">
+      <h1>
+        Tongue Twisters
+        <button type="button" name="catBack" class="btn btn-primary back findOut pull-right" ng-click="tab=0">
+          <strong>&lt;&lt; Back</strong>
+        </button>
+      </h1>
+    </div>
+  </section>
+
+  <section id="sentences" ng-show="tab==4">
+    <div class="container-fluid">
+      <h1>
+        Sentences
+        <button type="button" name="catBack" class="btn btn-primary back findOut pull-right" ng-click="tab=0">
+          <strong>&lt;&lt; Back</strong>
+        </button>
+      </h1>
+    </div>
+  </section>
+
   <script src="assets/js/jquery.min.js" charset="utf-8"></script>
   <script src="assets/js/bootstrap.min.js" charset="utf-8"></script>
   <script src="assets/js/jquery.validate.min.js" charset="utf-8"></script>
+  <script src="assets/js/angular.min.js" charset="utf-8"></script>
+  <script src="assets/js/angular.js" charset="utf-8"></script>
   <script src="assets/js/index.js" charset="utf-8"></script>
 </body>
 </html>
