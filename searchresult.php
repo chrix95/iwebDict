@@ -23,7 +23,7 @@
         </p>
         <p>
           <span>
-            <button type="button" name="<?php echo 'sound/word/' .$word. '.3GPP'; ?>" class="requestPlay btn btn-primary btn-xs">Play</button>
+            <button type="button" name="<?php echo 'sound/sentence/' .$word. '.3GPP'; ?>" class="requestPlay btn btn-primary btn-xs">Listen</button>
           </span>
           <strong>Sentence: </strong><?php echo $sentence; ?>
         </p>

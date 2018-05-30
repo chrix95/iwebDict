@@ -28,7 +28,7 @@
           <p>
             <strong>Sentence: </strong>{{ message.sentence }}
             <span>
-              <button type="button" name="sound/{{ message.word }}.3GPP" class="requestPlay btn btn-primary btn-xs">Listen</button>
+              <button type="button" name="sound/sentence/{{ message.word }}.3GPP" class="requestPlay btn btn-primary btn-xs">Listen</button>
             </span>
           </p>
         </div>
